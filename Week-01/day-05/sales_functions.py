@@ -11,3 +11,11 @@ def calculate_total_revenue(orders):
         )
 
     return total
+
+def calculate_discount(price, discount_percentage):
+    if discount_percentage <= 0 or discount_percentage >= 100:
+        print("Discount percentage must be between 0 and 100.")
+        return None
+    else:
+        discount_amount = price * (discount_percentage / 100)
+        return price - discount_amount
